@@ -1,41 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TodoList with Mimika</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    
+  </head>
+  <body>
+    <h1 class="title">TodoList with Mimika 👾</h1>
+    <div class="container">
+      <div id="newtask">
+        <input type="text" placeholder="Add to task.. 😸" />
+        <button id="push">➕</button>
+      </div>
 
-<div class="container">
-    <div class="perfil">
-        <div id="date"></div>
-        <h1 class="welcome">Hi! , user</h1>
-        <br>
+      <h2 class="task-title">Your task 📚</h2>
+      <div id="tasks"></div>
     </div>
 
-    <div class="add-area">
-        <input type="text" id="input" placeholder="add task"/>
-        <i id="boton-enter" class="fa fa-plus-circle"></i>
-    </div>
-
-    <!--this is area task-->
-    <div class="task-seccion">
-        <h3>this is your task</h3>
-        <ul id="list">
-
-
-
-
-        </ul>
-    </div>
-
-</div>
-
-
-    <script src="index.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>

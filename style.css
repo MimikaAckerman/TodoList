@@ -1,120 +1,101 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+@keyframes pan{
+    100% {background-position: 15% 50%;}
+}
+body{
+    height: 100vh;
+   background-image: url('./background.svg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   animation: pan 6s infinite alternate linear;
+}
+.title{
+    color: white;
+    text-align: center;
+}
+.task-title{
+    color: white;
+    text-align: center;
 }
 
-
-body {
-    background: #44A08D;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-    height: 100vh;   
-    font-family: 'Prompt', sans-serif;
-}
-
-.container {
-    max-width: 80%;
-    width: 400px;
-    height: 600px;
-    margin: 0 auto;
-}
-
-/*PERFIL*/
-
-
-
-.perfil h1 {
-    color: var(--white);
-}
-
-.perfil span {
-    color: var(--white);
-    letter-spacing: 1px;
-}
-
-#date {
-    color: var(--white);
-    padding: 50px 0 5px 0px;
+.container{
+    width: 40%;
+    min-width: 450px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+		background: #A58984;
+		border-radius: 10px;
 
 }
 
-
-
-
-/*AGREGAR TAREA*/
-
-.task-seccion {
-    background-color: rgb(115, 112, 112) ;
-    border-radius: 15px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    gap: 70px;
-    padding: 10px;
-    margin: 40px 0;
+#newtask{
+    position: relative;
+    padding: 30px 20px;
+}
+#newtask input{
+    width: 75%;
+    height: 30px;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+}
+#newtask input:focus{
+    outline: none;
+    border-color: #6A8288;
 }
 
- input {
-    width: 70%;
-    border-radius: 8px;
+#newtask button{
+    position: relative;
+    float: right;
+    width: 15%;
+    height: 45px;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #6A8288;
     border: none;
-    background-color: rgb(128, 134, 132);
-    padding-left: 10px;
-
-}
- input::placeholder {
-   font-size: 1.5rem;
-   color: white;
-}
-
-.task-seccion i{
-    font-size: 50px;
-  
-
-}
-.task-seccion i:hover {
-    transform: scale(1.1);
     cursor: pointer;
+    outline: none;
 }
-
-
-
-/*SECCION DE TAREA */
-
-.task-seccion h3 {
-    color: var(--white);
-    margin-bottom: 20px;
+#tasks{
+    background-color: #D39B7A;
+    padding: 30px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 92%;
+    position: relative;
 }
-
-.task-seccion li {
+.task{
+    background-color: #A58984;
+    height: 50px;
+		margin-bottom: 8px;
+    padding: 5px 10px;
     display: flex;
+		border-radius: 5px;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(to bottom,var(--blue-dark),var(--green));
-    border-radius: 15px;
-    padding: 10px;
-    color: var(--white);
-    margin: 5px 0;
-
-}
-.task-seccion i {
-    font-size: 25px;
-}
-
-.task-seccion > ul p {
-    font-size: 1.2rem;
-
-}
-
-
-.task-seccion i:hover {
-    color: var(--blue-light);
+    border: 1px solid #939697;
     cursor: pointer;
 }
+.task span{
+    font-size: 15px;
+    font-weight: 400;
+}
+.task button{
+    background-color: #325D86;
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
 
-.line-through{
+.completed{
     text-decoration: line-through;
-    color : var(--blue-light);
-} 
+}
